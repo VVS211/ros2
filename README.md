@@ -26,4 +26,20 @@
 # 回到你的 ros2_ws 根目录
 cd ~/ros2_ws
 colcon build --packages-select robot_speed_pkg
-source install/setup.bash
+source install/setup.bash  
+```
+2. 运行测试
+
+你需要打开 两个终端（记得每个终端都要先 source install/setup.bash）。
+
+终端 1 (启动发布者，发送模拟速度数据):
+
+```bash
+ros2 run robot_speed_pkg speed_publisher
+```
+
+终端 2 (启动订阅者，监控速度并报警):
+
+```bash
+ros2 run robot_speed_pkg speed_monitor
+```
