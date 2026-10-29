@@ -23,10 +23,19 @@
 
 ### 1. 编译工作空间
 ```bash
-# 回到你的 ros2_ws 根目录
-cd ~/ros2_ws
+# 创建工作空间并进入 src 目录
+mkdir -p ~/your_ws/src
+cd ~/your_ws/src
+
+# 获取本项目源码
+git clone  robot_speed_pkg
+
+# 回到工作空间根目录进行编译
+cd ~/your_ws
 colcon build --packages-select robot_speed_pkg
-source install/setup.bash  
+
+# 刷新环境变量
+source install/setup.bash
 ```
 2. 运行测试
 
