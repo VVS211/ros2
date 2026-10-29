@@ -27,8 +27,8 @@
 mkdir -p ~/your_ws/src
 cd ~/your_ws/src
 
-# 获取本项目源码
-git clone  robot_speed_pkg
+# 获取本项目源码,并将其重命名为ROS2包含 robot_speed_pkg
+git clone https://github.com/VVS211/ros2.git robot_speed_pkg
 
 # 回到工作空间根目录进行编译
 cd ~/your_ws
